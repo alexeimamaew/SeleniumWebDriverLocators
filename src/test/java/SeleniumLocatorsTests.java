@@ -13,6 +13,7 @@ import static Mamaev.Constants.BASE_URL;
 public class SeleniumLocatorsTests {
     WebDriver driver;
 
+
     @BeforeEach
     void start() {
         driver = new ChromeDriver();
