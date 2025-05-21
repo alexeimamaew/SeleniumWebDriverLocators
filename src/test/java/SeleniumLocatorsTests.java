@@ -22,7 +22,6 @@ public class SeleniumLocatorsTests {
    @AfterEach
     void close() {driver.close(); }
 
-
     @Test
     void    baseLocatorsTests () throws InterruptedException {
         driver.get(BASE_URL);
