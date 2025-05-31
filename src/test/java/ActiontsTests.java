@@ -191,9 +191,9 @@ public class ActiontsTests {
     @Test
     void rightButtonClickTest () {
         driver.get("https://bonigarcia.dev/selenium-webdriver-java/dropdown-menu.html");
-        WebElement RughtButton = driver.findElement(By.id("my-dropdown-3"));
+        WebElement rightButton = driver.findElement(By.id("my-dropdown-3"));
         new Actions(driver)
-                .doubleClick(RughtButton)
+                .doubleClick(rightButton)
                 .perform();
     }
 
