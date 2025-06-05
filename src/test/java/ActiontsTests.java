@@ -9,11 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -32,9 +30,6 @@ public class ActiontsTests {
 
     @AfterEach
     void close() {driver.close(); }
-
-    @Test
-    void openForm (){};
 
     @Test
     void  inputText () throws InterruptedException {
@@ -60,7 +55,7 @@ public class ActiontsTests {
     }
     @Test
     void inputTextToDisabled () {
-        this.openForm();
+        driver.get(BASE_URL);
         WebElement disabled = driver.findElement(By.name("my-disabled"));
         assertEquals("", disabled.getAttribute("value"));
         ElementNotInteractableException thrown = assertThrows(
@@ -70,10 +65,9 @@ public class ActiontsTests {
         assertThat(thrown.getMessage()).contains("element not interactable");
     }
 
-
     @Test
     void checkInputReadOnly () {
-        this.openForm();
+        driver.get(BASE_URL);
         WebElement disabled = driver.findElement(By.name("my-readonly"));
         assertEquals("Readonly input", disabled.getAttribute("value"));
     }
@@ -88,7 +82,6 @@ public class ActiontsTests {
         Assertions.assertEquals("Three", select.getFirstSelectedOption().getText());
         Assertions.assertTrue(select.getFirstSelectedOption().isSelected());
     }
-
 
     @Test
     void fileUploadTest() throws IOException, InterruptedException {
