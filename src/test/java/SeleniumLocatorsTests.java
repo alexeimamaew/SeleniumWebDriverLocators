@@ -17,7 +17,7 @@ public class SeleniumLocatorsTests {
     @BeforeEach
     void start() {
         driver = new ChromeDriver();
-        driver.get(BASE_URL);
+        driver.get("https://bonigarcia.dev/selenium-webdriver-java/web-form.html");
     }
 
    @AfterEach
