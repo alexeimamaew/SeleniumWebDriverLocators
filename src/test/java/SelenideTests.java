@@ -15,16 +15,16 @@ public class SelenideTests {
 
     @Test
         void baseLocatorsTests() {
-            SelenideElement textInputByClass = $(".display-4"); // Selenide's CSS selector
-            assertEquals("Hands-On Selenium WebDriver with Java", title()); // Selenide's title()
+            SelenideElement textInputByClass = $(".display-4");
+            assertEquals("Hands-On Selenium WebDriver with Java", title());
         }
 
     @Test
     void baseLocatorsTests1() {
-        SelenideElement textInputById = $("#my-text-id"); // By ID using CSS selector
+        SelenideElement textInputById = $("#my-text-id");
         textInputById.sendKeys("textInputId");
 
-        SelenideElement textInputByName = $("[name='my-password']"); // By name using CSS selector
+        SelenideElement textInputByName = $("[name='my-password']");
         textInputByName.sendKeys("textInputPassword");
     }
 
